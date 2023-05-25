@@ -9,7 +9,8 @@ level1_keys = ["GLOBAL_MEDIA_SETTINGS","PORT_MEDIA_SETTINGS"]
 
 setting_keys = ["preemphasis","idriver","ipredriver",\
                 "main","pre1","pre2","pre3",\
-                "post1","post2","post3","attn"]
+                "post1","post2","post3","attn",\
+                "interface_type", "unreliable_los"]
 lane_prefix = "lane"
 comma_separator = ","
 range_separator = "-"
@@ -52,6 +53,11 @@ def check_media_dict(vendor_dict):
                 return False
 
             lane_dict = value_dict[value_key]
+
+            # For setting key interface_type and unreliable_los
+            if not isinstance(lane_dict, dict):
+                continue
+
             for lanes in lane_dict:
                 if not check_lane_and_value(lanes, lane_dict[lanes]):
                     return False

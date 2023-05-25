@@ -1,0 +1,10 @@
+{
+    "GLOBAL_MEDIA_SETTINGS": {
+        "1-32": {
+            "QSFP+-40GBASE-SR4-M": {
+                "interface_type": "sr4",
+                "unreliable_los": "true"
+            }
+        }
+    }
+}
