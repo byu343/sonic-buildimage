@@ -131,7 +131,7 @@ get_tag_status(uint32_t dev_type, uint32_t variant, void *meta)
             }
         }
     }
-    else if ((dev_type == 0xb990)|| (dev_type == 0xb996))
+    else if ((dev_type == 0xb990)|| (dev_type == 0xb996) || (dev_type == 0xb993))
     {
         fd_index = 9;
         valptr = (uint32_t *)meta;
